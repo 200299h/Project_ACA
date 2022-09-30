@@ -1,10 +1,24 @@
 class Book:
-    def __init__(self, name, publisher, publish_date, category, author):
+    def __init__(self, name, publish_date, category, publisher, author):
         self.name = name
-        self.publisher = publisher
         self.publish_date = publish_date
         self.category = category
+        self.publisher = publisher
         self.author = author
+
+
+class Author:
+    def __init__(self, author_name, author_birth_date, author_death_date=None):
+        self.author_name = author_name
+        self.author_birth_date = author_birth_date
+        self.author_death_date = author_death_date
+
+
+class Publisher:
+    def __init__(self, publisher_name, publisher_birth_date, publisher_death_date=None):
+        self.publisher_name = publisher_name
+        self.publisher_birth_date = publisher_birth_date
+        self.publisher_death_date = publisher_death_date
 
 
 class Student:
@@ -17,12 +31,3 @@ class Student:
 
 class Librarian:
     pass
-
-
-book_1 = Book(name="The Great Gatsby",
-              publisher="Charles Scribner's Sons",
-              publish_date="April 10 1925",
-              category="Tragedy",
-              author={"Scott Fitzgerald": ["September 24, 1896 – December 21, 1940",
-                                           "American fiction writer"]}
-              )
